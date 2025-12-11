@@ -1,4 +1,4 @@
-# MSE = (1/n) * Σ (y - y_hat)^2
+# MSE = (1/n) * sum(y - y_hat)^2
 
 def mse(y_true, y_pred):
     n = len(y_true)

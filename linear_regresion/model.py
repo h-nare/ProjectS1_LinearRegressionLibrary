@@ -58,7 +58,7 @@
 #             error_sum += (y_pred[i] - y[i]) ** 2
 #         return error_sum / len(y)
 
-# linear_regresion/model.py
+# main functions 
 
 import math
 import random
