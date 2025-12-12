@@ -55,7 +55,8 @@ From the project root directory, run:
 
 ```bash
 python3 -m linear_regresion.demo
-
+```
+```python
 from linear_regresion import LinearRegression
 
 model = LinearRegression(learning_rate=0.01, epochs=1000, normalize=True)
