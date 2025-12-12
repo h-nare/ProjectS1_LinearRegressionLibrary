@@ -71,7 +71,7 @@ linear_regresion/
 ├── utils.py    # Helper functions
 ├── demo.py     # Demonstration script
 └── __init__.py
-
+```
 ## Improvement Plan
 
 Several improvements are planned for future versions of this library. One potential enhancement is the addition of regularization techniques such as L1 and L2 regularization to reduce overfitting. This would be implemented by modifying the loss function and gradient update rules.
