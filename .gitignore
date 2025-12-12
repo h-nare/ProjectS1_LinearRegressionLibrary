@@ -3,4 +3,5 @@ __pycache__/
 *.pyc
 *.pyo
 .DS_Store
+saved_model.json
 
