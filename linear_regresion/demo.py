@@ -47,3 +47,14 @@ print("test mse:", mse(y_test, test_pred))
 # plot training curve
 model.plot_loss()
 
+model.save("saved_model.json")
+print("Model saved!")
+
+# create a new model and load the saved parameters
+loaded_model = LinearRegression()
+loaded_model.load("saved_model.json")
+
+print("Loaded weights:", loaded_model.weights)
+print("Loaded bias:", loaded_model.bias)
+
+

@@ -60,6 +60,7 @@
 
 # main functions 
 
+import json
 import math
 import random
 from .metrics import mse
@@ -260,4 +261,34 @@ class LinearRegression:
         Plot the training loss curve.
         """
         plot_loss(self.loss_history)
+
+        # -----------------------
+    # save model parameters
+    # -----------------------
+    def save(self, filename):
+        # I save weights, bias and normalization params to a JSON file
+        data = {
+            "weights": self.weights,
+            "bias": self.bias,
+            "normalize": self.normalize,
+            "feature_means": self.feature_means,
+            "feature_stds": self.feature_stds
+        }
+
+        with open(filename, "w") as f:
+            json.dump(data, f)
+
+    # -----------------------
+    # load model parameters
+    # -----------------------
+    def load(self, filename):
+        # I load saved parameters from JSON and restore the model state
+        with open(filename, "r") as f:
+            data = json.load(f)
+
+        self.weights = data["weights"]
+        self.bias = data["bias"]
+        self.normalize = data["normalize"]
+        self.feature_means = data["feature_means"]
+        self.feature_stds = data["feature_stds"]
 
