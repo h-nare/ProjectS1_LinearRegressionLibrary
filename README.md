@@ -80,7 +80,7 @@ Several improvements are planned for future versions of this library. One potent
 
 Another planned feature is support for polynomial regression, which would allow the model to capture non-linear relationships by expanding input features. Mini-batch gradient descent could also be added to improve training efficiency on larger datasets.
 
-Additional evaluation metrics beyond mean squared error, as well as automated unit tests, could further improve the robustness and usability of the library.
+Additional evaluation metrics beyond Mean Squared Error, as well as automated unit tests, could further improve the robustness and usability of the library.
 
 
 
