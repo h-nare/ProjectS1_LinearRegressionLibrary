@@ -72,7 +72,13 @@ linear_regresion/
 ├── demo.py     # Demonstration script
 └── __init__.py
 
+## Improvement Plan
 
+Several improvements are planned for future versions of this library. One potential enhancement is the addition of regularization techniques such as L1 and L2 regularization to reduce overfitting. This would be implemented by modifying the loss function and gradient update rules.
+
+Another planned feature is support for polynomial regression, which would allow the model to capture non-linear relationships by expanding input features. Mini-batch gradient descent could also be added to improve training efficiency on larger datasets.
+
+Additional evaluation metrics beyond mean squared error, as well as automated unit tests, could further improve the robustness and usability of the library.
 
 
 
