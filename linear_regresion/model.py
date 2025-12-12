@@ -1,63 +1,3 @@
-# class LinearRegression:
-#     def __init__(self, learning_rate, epochs):
-#         self.learning_rate = learning_rate
-#         self.epochs = epochs
-#         self.weights = []
-#         self.bias = 0
-
-#     # y = m*x + b
-#     def fit(self, X, y):
-#         n_samples = len(X)
-#         n_features = len(X[0])
-
-#         self.weights = [0] * n_features
-#         self.bias = 0
-
-
-#         for _ in range(self.epochs):
-#             # compute predictions
-#             y_pred = []
-#             for i in range(n_samples):
-#                 prediction = self.bias
-#                 for j in range(n_features):
-#                     prediction += self.weights[j]*X[i][j]
-#                 y_pred.append(prediction)
-
-#             # compute gradients for m and b
-#             grad_w = [0] * n_features
-#             grad_b = 0
-
-#             for i in range(n_samples):
-#                 error = y_pred[i] - y[i]
-#                 grad_b += error
-#                 for j in range(n_features):
-#                     grad_w[j] += error * X[i][j]
-
-#             grad_b = (2 / n_samples) * grad_b
-#             for j in range(n_features):
-#                 grad_w[j] = (2/n_samples)*grad_w[j]
-
-#             # update parameters
-#             grad_b -= self.learning_rate * grad_b
-#             for j in range(n_features):
-#                 self.weights[j] -= self.learning_rate*grad_w[j]
-
-#     def predict(self, X):
-#         predictions = []
-#         for sample in X:
-#             prediction = self.bias
-#             for j in range(len(self.weights)):
-#                 prediction += self.weights[j] * sample[j]
-#             predictions.append(prediction)
-#         return predictions
-
-#     def mse(self,X,y):
-#         y_pred = self.predict(X)
-#         error_sum = 0
-#         for i in range(len(y)):
-#             error_sum += (y_pred[i] - y[i]) ** 2
-#         return error_sum / len(y)
-
 # main functions 
 
 import json
@@ -292,3 +232,63 @@ class LinearRegression:
         self.feature_means = data["feature_means"]
         self.feature_stds = data["feature_stds"]
 
+
+# class LinearRegression:
+#     def __init__(self, learning_rate, epochs):
+#         self.learning_rate = learning_rate
+#         self.epochs = epochs
+#         self.weights = []
+#         self.bias = 0
+
+#     # y = m*x + b
+#     def fit(self, X, y):
+#         n_samples = len(X)
+#         n_features = len(X[0])
+
+#         self.weights = [0] * n_features
+#         self.bias = 0
+
+
+#         for _ in range(self.epochs):
+#             # compute predictions
+#             y_pred = []
+#             for i in range(n_samples):
+#                 prediction = self.bias
+#                 for j in range(n_features):
+#                     prediction += self.weights[j]*X[i][j]
+#                 y_pred.append(prediction)
+
+#             # compute gradients for m and b
+#             grad_w = [0] * n_features
+#             grad_b = 0
+
+#             for i in range(n_samples):
+#                 error = y_pred[i] - y[i]
+#                 grad_b += error
+#                 for j in range(n_features):
+#                     grad_w[j] += error * X[i][j]
+
+#             grad_b = (2 / n_samples) * grad_b
+#             for j in range(n_features):
+#                 grad_w[j] = (2/n_samples)*grad_w[j]
+
+#             # update parameters
+#             grad_b -= self.learning_rate * grad_b
+#             for j in range(n_features):
+#                 self.weights[j] -= self.learning_rate*grad_w[j]
+
+#     def predict(self, X):
+#         predictions = []
+#         for sample in X:
+#             prediction = self.bias
+#             for j in range(len(self.weights)):
+#                 prediction += self.weights[j] * sample[j]
+#             predictions.append(prediction)
+#         return predictions
+
+#     def mse(self,X,y):
+#         y_pred = self.predict(X)
+#         error_sum = 0
+#         for i in range(len(y)):
+#             error_sum += (y_pred[i] - y[i]) ** 2
+#         return error_sum / len(y)
